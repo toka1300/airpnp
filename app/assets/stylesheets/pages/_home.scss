@@ -1,5 +1,3 @@
-// Specific CSS for your home-page
-
 #landing-page-banner {
   background-image: asset_url('home-banner-toilet-paper-background.jpg');
   background-size: cover;
@@ -12,33 +10,18 @@
   width: 900px;
   margin: auto;
   text-align: center;
+  & h4 {
+    font-size: 20px;
+  }
 }
 
-// Comment
-#banner-title {
-  color: black;
-}
-
-#description {
-  color: black;
-  opacity: .8;
-  font-size: 20px;
-}
-
-#banner-btn {
-  padding: 10px;
-  font-size: 16px;
-  color: white;
-  background-color: #d3889b;
-  border-radius: 10px;
-  padding: 10px 10px;
-  margin: 0 auto;
-  text-decoration: none;
-}
-
-#banner-btn:hover {
-  font-size: 18px;
-  transition: 0.5s;
+#landing-cards-container {
+  margin-top: 24px;
+  text-align: center;
+  align-items: center;
+  & h2 {
+    margin-bottom: 24px;
+  }
 }
 
 #landing-page-cards {
@@ -46,22 +29,10 @@
   justify-content: space-between;
   margin: auto auto 30px;
   width: 900px;
-  align-content: center;
-}
-
-.landing-page-card {
-  border: 1px solid lightgrey;
-  border-radius: 2px;
-  padding: 20px;
-  width: 300px;
-  margin-left: 20px;
-  box-shadow: 1px 2px #b1afaf;
-}
-
-#landing-cards-container {
-  margin-top: 40px;
-  text-align: center;
-  align-items: center;
+  align-content: center;  
+    & h3 {
+      font-size: 24px;
+    }
 }
 
 .landing-icons {
@@ -75,113 +46,53 @@
   color:#4b4c4d;
   margin-top: 20px;
   z-index: 1;
-}
-
-.footer-basic ul {
-  font-family: 'Roboto Flex', sans-serif;
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:12px;
-  line-height:1.6;
-  margin-bottom:0;
-}
-
-.footer-basic li {
-  padding:0 10px;
-}
-
-.footer-basic ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.8;
-}
-
-.footer-basic ul a:hover {
-  opacity:1;
-}
-
-.footer-basic .social {
-  text-align:center;
-  padding-bottom:10px;
-}
-
-.footer-basic .social > a {
-  font-family: 'Roboto Flex', sans-serif;
-  font-size:20px;
-  width:35px;
-  height:35px;
-  line-height:35px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  border:1px solid #ccc;
-  margin:0 8px;
-  color:inherit;
-  opacity:0.75;
-}
-
-.footer-basic .social > a:hover {
-  opacity:0.9;
-}
-
-.footer-basic .copyright {
-  font-family: 'Roboto Flex', sans-serif;
-  margin-top:5px;
-  text-align:center;
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:0;
-}
-
-.map-card-container {
-  display: flex;
-  margin-top: 32px;
-}
-
-#index-cards-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-#searchbar-map {
-  width: 50%;
-  height: 100vh;
-  position: sticky;
-  top: 65px;
-}
-
-.index-cards {
-  flex-grow: 1;
-}
-
-#index-card {
-  width: 80%;
-  margin: 0 auto;
-  margin-bottom: 16px;
-}
-
-.searchbar {
-  position: sticky;
-}
-
-#bathrooms {
-  padding: 10px;
-}
-
-#title {
-  position: sticky;
-  top: 65px;
-  color: black;
-  z-index: 100;
-  width: 100%;
-  height: 80.75px;
-  margin: 0;
-  background: #f4f4f4;
-  z-index: 50;
-}
-
-#title-cards-container {
-  width: 50%;
+  & ul {
+    font-family: 'Roboto Flex', sans-serif;
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:12px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  & li {
+    padding:0 10px;
+  }
+  & ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+    &:hover {
+      opacity:1;
+    }
+  }
+  & .social {
+    text-align:center;
+    padding-bottom:10px;
+  }
+  & .social > a {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size:20px;
+    width:35px;
+    height:35px;
+    line-height:35px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  & .social > a:hover {
+    opacity:0.9;
+  }
+  & .copyright {
+    font-family: 'Roboto Flex', sans-serif;
+    margin-top:5px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }
 }

@@ -1,44 +1,8 @@
-#show-title {
-  margin-top: 5px;
-}
-
 #image-card-container {
   display: flex;
 }
 
-#buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-}
-
-#show-title {
-  text-align: center;
-}
-
-#show-image {
-  height: 50%
-}
-
 #show-map {
   width: 50%;
-  margin: 16px;
-}
-
-#buttons {
-  margin-top: 10px;
-}
-
-#bathroom-show-card {
-  display: flex;
-  flex-direction: column;
-  height: 50%;
-  justify-content: center;
-  padding: 0 8px 0 8px;
-}
-
-#buttons a {
-  font-size: 16px;
-  margin: 0 auto;
+  margin: 0 16px 0 16px;
 }

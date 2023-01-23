@@ -9,8 +9,8 @@
       <p>Status: <%= @booking.status %></p>
       <p>Date: <br> <%= @booking.start_date_time %> to: <br> <%= @booking.end_date_time %></p>
 
-      <%= link_to 'Back to Bookings', host_bookings_path, class: 'button' %>
-      <%= link_to 'Set Status', status_form_path(@booking), class: 'button' %>
+      <%= link_to 'Back to Bookings', host_bookings_path, class: 'btn' %>
+      <%= link_to 'Set Status', status_form_path(@booking), class: 'btn' %>
     </div>
   </div>
 </div>

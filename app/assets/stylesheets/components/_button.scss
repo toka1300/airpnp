@@ -1,29 +1,38 @@
 .button {
-  padding: 10px;
   font-size: 16px;
   color: white;
-  background-color: #d3889b;
-  border-radius: 10px;
+  background-color: $primary;
   margin: 0 auto;
   text-decoration: none;
-}
-
-
-.button:hover {
   transition: 0.5s;
-  color: white;
-  background-color: #f5a7ba;
-  font-size: large;
 }
 
 .btn {
+  border-radius: 8px;
+  background-color: $primary;
+  transition: all 0.5s;
   color: white;
-  background-color: #d3889b;
   border: white;
+  &:hover {
+    background-color: $secondary;
+    color: white;
+  }
+  &:focus {
+    background-color: $secondary !important;
+    border: none;
+  }
+  &:active {
+    background-color: $secondary !important;
+    border: none;
+  }
 }
 
-.btn:hover {
-  transition: 0.5s;
-  color: white;
-  background-color: #f5a7ba;
+.btn-med {
+  width: 12em;
+  align-self: center;
+}
+
+.btn-back {
+  top: 16px;
+  left: 16px;
 }

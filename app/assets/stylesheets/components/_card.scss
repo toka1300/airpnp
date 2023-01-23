@@ -1,47 +1,55 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 32px;
+}
+
+.border {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.landing-page-card {
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  padding: 20px;
+  width: 300px;
+  margin-left: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow:3px 0px 10px #ECC2CC;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   height: 300px;
   width: auto;
   border-radius: 15px;
-}
 
-.card-trip > img {
-  height: 75%;
-  width: 100%;
-  object-fit: cover;
-}
+  & > img {
+    height: 75%;
+    width: 100%;
+    object-fit: cover;
+  }
 
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
+  & h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
 
-.card-trip p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
+  & p {
+    font-size: 12px;
+    opacity: .7;
+    margin: 0;
+  }
 
-.card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-  transition: width 2s;
-}
-
-a:hover {
-  text-decoration: none;
-  color: rgb(179, 127, 144);
+  & .card-trip-infos {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+  }  
 }
 
 .card-trip-infos .card-trip-user {
@@ -50,12 +58,6 @@ a:hover {
   top: -20px;
   width: 40px;
   text-decoration: none;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 32px;
 }
 
 .card-text {
@@ -74,6 +76,7 @@ a:hover {
   left: 8px;
   z-index: 10px;
 }
+
 .edit-icon {
   position: absolute;
   top: 8px;
@@ -81,9 +84,37 @@ a:hover {
   z-index: 10px;
 }
 
+#bathroom-show-card {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: center;
+  padding: 16px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#bathroom-image {
+  width: 100%;
+}
+
 .my-bathrooms-card-container {
   position: relative;
+}
 
+.button.back {
+  top: 36px;
+  left: 36px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: width 2s;
+
+  &:hover {
+    text-decoration: none;
+    color: initial;
+  }
 }
 
 // Smallest device
@@ -124,8 +155,4 @@ a:hover {
 
 .card {
   margin: 0, auto;
-}
-
-.card p {
-  margin-left: 24px;
 }

@@ -1,14 +1,18 @@
 <div class="container w-50">
-  <%= link_to 'Back to Bookings', bookings_path, class: "button" %>
-<div class="title-show d-flex justify-content-center my-3">
-      <h1>Your Booking</h1>
-    </div>
-  <div class="card">
-    <div class="holder align-self-center p-4">
-      <p> <b>User:</b><%= @booking.user.email %></p>
-      <p> <b>Status:</b> <%= @booking.status %></p>
-      <p> <b>Host email: </b><%= @booking.bathroom.host.email %></p>
-      <p> <b> Date: </b><%= @booking.start_date_time %> to: <br> <%= @booking.end_date_time %></p>
+  <div class="title-show d-flex justify-content-center my-3">
+    <h1>Your Booking</h1>
+  </div>
+  <div class="card holder align-self-center">
+    <%= link_to bookings_path do %>
+      <btn class="btn position-absolute btn-back">All your bookings</btn>
+    <% end %>
+    <img class="img-fluid w-100"<%= cl_image_tag @booking.bathroom.photo.key, crop: :fill %>
+    <div class="p-4">
+      <p> <i class="fa-solid fa-user"></i> <%= @booking.user.email %></p>
+      <p> <i class="fa-solid fa-calendar-check"></i> <%= @booking.status %></p>
+      <p> <i class="fa-solid fa-envelope"></i> <%= @booking.bathroom.host.email %></p>
+      <p> <i class="fa-solid fa-hourglass-start"></i> <%= @booking.start_date_time.strftime("%B %d %Y %I:%M %p") %></p>
+      <p> <i class="fa-solid fa-hourglass-end"></i> <%= @booking.end_date_time.strftime("%B %d %Y %I:%M %p") %></p>
     </div>
   </div>
 </div>
