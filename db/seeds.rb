@@ -47,14 +47,14 @@ last_names = %w[Burgundy
   Scott
   ]
 
-descriptions = ["KVWN-TV news station's bathroom. Step back in time to the glorious 1970s, where the shag carpet is plush, the wood paneling is knotty, and complimentary 'Jazz' cologne",
-"I haven't had a job in six years, hoping this will pay the bills!",
-"I can spare a square, if you need",
+descriptions = ["KVWN-TV news station's bathroom. Step back in time to the glorious 1970s, where the shag carpet is plush, the wood paneling is knotty, and complimentary 'Jazz' cologne, soap and shampoo",
+"Step right up folks, and get ready for the bathroom experience of a lifetime! I haven't had a job in six years, hoping this will pay the bills!",
+"Introducing the ultimate bathroom experience, brought to you by the one and only Elaine Bennis. This bathroom is a work of art and has soothing music by The Eagles - Desperado. Oh and - I CAN spare a square, if you need",
 "Lightning-fast bathroom, where speed and precision reign supreme. Indulge in high-tech toilets and lightning-fast hand dryers",
-"Very well equipped washroom, you will have no issues",
+"Very well equipped washroom, you will have no issues, includes a bidet.",
 "The BEST bathroom, HUUUGE toilet, people are saying it is the biggest ever",
-"Maybe this is just the next episode on my new series, you'll have to come to find out",
-"People say I am the best boss and have the best bathroom. Come to Dunder Mifflin's bathroom - where paper meets people",
+"Introducing the ultimate luxury bathroom experience, brought to you by none other than Nathan Fielder. This one-of-a-kind bathroom is fully equipped with a state-of-the-art toilet, a sink that dispenses complimentary seltzer water, and a shower with a built-in 'surprise' feature. The decor is a unique blend of minimalism and absurdity, and the ambiance is second to none. But the real kicker? A fully stocked mini fridge filled with Nathan's favorite snacks. Don't miss out on this unforgettable opportunity to answer nature's call in style! Is this the next season of 'The Rehearsal'? Book the bathroom to find out!",
+"People say I am the best boss and have the best bathroom. Come to Dunder Mifflin's bathroom - where paper meets people. Includes high-powered hand dryer.",
 ]
 
 

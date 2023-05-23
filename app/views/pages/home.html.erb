@@ -1,13 +1,14 @@
 <%# Banner %>
-<div id="landing-page-banner">
-  <div id="banner-container">
+<div class="banner-container">
+  <div class="banner-info px-4">
     <h1 id="banner-title">Airpnp makes bathroom breaks easier</h1>
     <h4>Find the perfect bathroom, and take that break you were waiting for!</h4>
-    <%= link_to 'Browse Bathrooms', bathrooms_path, class: 'btn' %>
+    <%= link_to 'Browse Bathrooms', bathrooms_path, class: 'btn btn-med align-self-start' %>
   </div>
+  <%# <div class="landing-page-image"></div> %>
+  <%= image_tag "banner-image.png", class: 'landing-page-image' %>
 </div>
 
-<%# How it works %>
 <div id="landing-cards-container">
   <h2>How It Works</h2>
   <div id="landing-page-cards">

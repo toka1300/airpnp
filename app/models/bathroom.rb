@@ -7,6 +7,7 @@ class Bathroom < ApplicationRecord
   has_many :bookings, dependent: :destroy
   validates :price, presence: true
   validates :address, presence: true
+  validates :photo, presence: true
 
   after_validation :geocode, if: :will_save_change_to_address?
 

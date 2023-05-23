@@ -3,16 +3,21 @@
     <h1>Your Host Bookings</h1>
   </div>
 
-  <div class="d-flex justify-content-between">
+  <div class="d-flex justify-content-between gap-5">
 
     <div class="packet">
       <h2>Pending</h2>
       <% @bookings.each do |booking| %>
         <% if booking.status == "pending" && booking.bathroom.host == current_user %>
-          <div class="card">
-            <p class="card-text d-flex justify-content-center">User: <%= booking.user.email %></p>
-            <p class="card-text d-flex justify-content-center"><%= booking.start_date_time %> to: <br> <%= booking.end_date_time %></p>
-            <%= link_to 'See Details', host_booking_path(booking), class: 'button' %>
+          <div class="card d-flex justify-content-center">
+            <p class="card-text d-flex justify-content-center">
+              <i class="fa-solid fa-user fa-fw"></i>
+              <%= booking.user.email %>
+            </p>
+            <p class='d-flex justify-content-center'>
+              <i class="fa-solid fa-calendar fa-fw"></i> <%= booking.start_date_time.strftime("%B %d %Y") %>
+            </p>
+            <%= link_to 'See Details', host_booking_path(booking), class: 'btn mx-auto mb-2' %>
         </div>
         <% end %>
       <% end %>
@@ -22,10 +27,12 @@
       <h2>Accepted</h2>
       <% @bookings.each do |booking| %>
         <% if booking.status == "accepted" && booking.bathroom.host == current_user %>
-          <div class="card">
+          <div class="card d-flex justify-content-center">
             <p class="card-text d-flex justify-content-center">User: <%= booking.user.email %></p>
-            <p class="card-text d-flex justify-content-center"><%= booking.start_date_time %> to:<br> <%= booking.end_date_time %></p>
-            <%= link_to 'See Details', host_booking_path(booking), class: 'button' %>
+            <p class='d-flex justify-content-center'>
+              <i class="fa-solid fa-calendar fa-fw"></i> <%= booking.start_date_time.strftime("%B %d %Y") %>
+            </p>
+            <%= link_to 'See Details', host_booking_path(booking), class: 'btn mx-auto mb-2' %>
         </div>
         <% end %>
       <% end %>
@@ -34,10 +41,12 @@
       <h2>Rejected</h2>
       <% @bookings.each do |booking| %>
         <% if booking.status == "rejected" && booking.bathroom.host == current_user  %>
-          <div class="card">
+          <div class="card d-flex justify-content-center">
             <p class="card-text d-flex justify-content-center">User: <%= booking.user.email %></p>
-            <p class="card-text d-flex justify-content-center"><%= booking.start_date_time %> to:<br> <%= booking.end_date_time %></p>
-            <%= link_to 'See Details', host_booking_path(booking), class: 'button' %>
+            <p class='d-flex justify-content-center'>
+              <i class="fa-solid fa-calendar fa-fw"></i> <%= booking.start_date_time.strftime("%B %d %Y") %>
+            </p>
+            <%= link_to 'See Details', host_booking_path(booking), class: 'btn mx-auto mb-2' %>
         </div>
         <% end %>
       <% end %>

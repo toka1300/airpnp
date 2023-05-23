@@ -25,6 +25,9 @@
     background-color: $secondary !important;
     border: none;
   }
+  &.btn-search {
+    border-radius: 0 8px 8px 0;
+  }
 }
 
 .btn-med {

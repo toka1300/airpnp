@@ -2,8 +2,8 @@
   <%= form_with url: bathrooms_path, method: :get, class: "d-flex" do %>
     <%= text_field_tag :query,
       params[:query],
-      class: "form-control bg-white",
-      placeholder: "Find a room to meet your specific 'needs'"%>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+      class: "form-control bg-white border-right-0",
+      placeholder: "Search: 'music', 'bidet', 'hand dryer', etc."%>
+    <%= submit_tag "Search", class: "btn btn-search" %>
   <% end %>
 </div>

@@ -1,32 +1,30 @@
 
-<div class="container mt-4">
-  <div class="d-flex">
-    <div class="card" id="bathroom-show-card">
-      <% if @bathroom.photo.attached? %>
-        <%= cl_image_tag @bathroom.photo.key, height: 330, width: 660, crop: :fill, id: 'bathroom-image'%>
-      <% end %>
-      <p>  <%= @bathroom.description %> </p>
-      <p> <i class="fa-solid fa-location-dot fa-fw"></i> <%= @bathroom.address %> </p>
-      <p> <i class="fa-solid fa-money-bill-1-wave fa-fw"></i> $<%= @bathroom.price %></p>
+<div class="mt-4 container-bathroom-show">
+  <div class="bg-white" id="bathroom-show-card">
+    <% if @bathroom.photo.attached? %>
+      <%= cl_image_tag @bathroom.photo.key, height: 330, width: 660, crop: :fill, class: 'mb-2 w-100'%>
+    <% end %>
+    <p class="mb-0 mt-2">  <%= @bathroom.description %> </p>
+    <hr>
+    <p> <i class="fa-solid fa-location-dot fa-fw"></i> <%= @bathroom.address %> </p>
+    <p> <i class="fa-solid fa-money-bill-1-wave fa-fw"></i> $<%= @bathroom.price %></p>
+    <% if current_user != @bathroom.user %>
       <p> <i class="fa-solid fa-user fa-fw"></i>  <%= "#{@user.first_name} #{@user.last_name}" %> </p>
-      <% if current_user != @bathroom.user %>
-        <%= link_to 'Book this bathroom', new_bathroom_booking_path(@bathroom), class: 'btn btn-med' %>
-      <% end  %>
-        <% if current_user == @bathroom.user %>
-          <%= link_to "Update this bathroom",
-          edit_bathroom_path(@bathroom), class: 'btn btn-med'
-          %>
-        <% end  %>
-      <% if current_user == @bathroom.user %>
-          <%= link_to "Delete this bathroom",
-          bathroom_path(@bathroom),
-          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'btn btn-med'
-          %>
-      <% end  %>
-    </div>
-      <div id="show-map"
-        data-controller="map"
-        data-map-markers-value="<%= @marker.to_json %>"
-        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
+      <%= link_to 'Book this bathroom', new_bathroom_booking_path(@bathroom), class: 'btn btn-med' %>
+    <% end  %>
+    <% if current_user == @bathroom.user %>
+      <%= link_to "Update this bathroom", edit_bathroom_path(@bathroom), class: 'btn btn-med mb-3'%>
+    <% end  %>
+    <% if current_user == @bathroom.user %>
+      <%= link_to "Delete this bathroom",
+      bathroom_path(@bathroom),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'btn btn-med'%>
+    <% end  %>
   </div>
+
+  <div id="show-map"
+      data-controller="map"
+      data-map-markers-value="<%= @marker.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>

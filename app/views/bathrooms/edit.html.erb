@@ -1,14 +1,14 @@
 
 
 <div class="container border col-lg-5 col-sm-6 mt-4">
-  <h1 class="d-flex justify-content-center">Clean up your bathroom!</h1>
-  <%= simple_form_for(@bathroom) do |f| %>
-    <%= f.input :price %>
-    <%= f.input :address %>
-    <%= f.input :description %>
+  <h1 class="d-flex justify-content-center">Clean up your bathroom</h1>
+  <%= simple_form_for(@bathroom, html: { class: "d-flex flex-column align-items-center mt-2" }) do |f| %>
+    <%= f.input :price, wrapper_html: { class: 'w-75' } %>
+    <%= f.input :address, wrapper_html: { class: 'w-75' } %>
+    <%= f.input :description, wrapper_html: { class: 'w-75' } %>
     <%= f.input :photo, as: :file,
                 required: true %>
-    <div class="button d-flex justify-content-center pb-2">
+    <div class="btn col-lg-4 d-flex justify-content-center pb-2 mb-2">
       <%= f.button :submit %>
     </div>
   <% end %>

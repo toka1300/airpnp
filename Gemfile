@@ -87,3 +87,5 @@ end
 gem 'cloudinary'
 
 gem 'geocoder'
+
+gem "hotwire-livereload", "~> 1.2"
