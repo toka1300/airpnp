@@ -1,6 +1,7 @@
 .container-bathroom-show {
   display: flex;
   justify-content: center;
+  margin: 0 16px;
   @media (max-width: 900px) {
     flex-direction: column;
     align-items: center;
@@ -14,17 +15,18 @@
     padding: 16px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     max-width: 600px;
-    margin-left: 16px;
+    margin: 0 16px 16px 0;
     @media (max-width: 900px) {
       width: 100%;
     }
   }
   & #show-map {
     width: 50%;
+    max-width: 563px;
     margin: 0 16px 0 16px;
     @media (max-width: 900px) {
       height: 500px;
-      width: 563px;
+      width: 100%;
     }
   }
   & .mapboxgl-canvas {
@@ -32,6 +34,15 @@
       width: 100%;
     }
   }
+}
+
+.mapboxgl-popup-content p {
+  max-height: 122px;
+  overflow: hidden;
+}
+
+.mapboxgl-popup-content h6 {
+  font-weight: bold;
 }
 
 .sign-up a {
@@ -59,7 +70,6 @@
   border-radius: 2px;
   padding: 20px;
   width: 300px;
-  margin-left: 20px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -174,6 +184,12 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  .card-trip .card-trip-infos {
+    padding-top: 32px;
+  }
+}
+
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .cards {
@@ -191,4 +207,17 @@ a {
 
 .card {
   margin: 0, auto;
+}
+
+.card.small {
+  margin-top: 24px;
+  max-width: 600px;
+}
+
+.container.small {
+  max-width: 600px;
+}
+
+.card.responsive {
+  max-width: 600px;
 }

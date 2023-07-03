@@ -31,6 +31,8 @@
 }
 
 #landing-cards-container {
+  display: flex;
+  flex-direction: column;
   margin-top: 40px;
   text-align: center;
   align-items: center;
@@ -42,7 +44,8 @@
 #landing-page-cards {
   display: flex;
   justify-content: space-between;
-  margin: auto auto 30px;
+  gap: 40px;
+  margin: auto 32px 30px;
   align-content: center;
   max-width: 1200px;
   @media (max-width: 992px) {
