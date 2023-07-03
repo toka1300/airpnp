@@ -1,4 +1,4 @@
-<div class="container border w-25 mt-4 bg-white">
+<div class="container border mt-4 bg-white small">
   <%= simple_form_for([@bathroom, @booking], html: { class: "d-flex flex-column align-items-center mt-2" }) do |f|%>
     <strong>
       <%= f.input :start_date_time, wrapper_html: { class: 'd-flex flex-column align-items-center' }, as: :datetime, html5: true, input_html: { class: "bg-white" } %>

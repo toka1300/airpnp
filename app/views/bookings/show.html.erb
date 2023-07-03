@@ -1,6 +1,6 @@
-<div class="d-flex flex-column align-items-center container w-25">
+<div class="d-flex flex-column align-items-center container">
   <h1 class="py-3">Your Booking</h1>
-  <div class="card holder align-self-center">
+  <div class="card holder align-self-center responsive">
     <img class="img-fluid w-100"<%= cl_image_tag @booking.bathroom.photo.key, crop: :fill %>
     <div class="p-4">
       <p> <i class="fa-solid fa-calendar-check"></i> <%= @booking.status %></p>

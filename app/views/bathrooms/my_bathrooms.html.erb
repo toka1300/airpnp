@@ -1,6 +1,6 @@
 <% if @bathrooms.count == 0 %>
   <div class="container d-flex justify-content-center mt-4">
-    <div class="card d-flex align-items-center w-50 p-4">
+    <div class="card d-flex align-items-center p-4">
       <p>You do not have any bathrooms listed yet, why not get started now?</p>
       <%= image_tag 'adventure_map.svg', class: "landing-icons" %>
       <%= link_to "List a bathroom", new_bathroom_path, class: "btn btn-med" %>

@@ -1,20 +1,23 @@
 .map-card-container {
   display: flex;
   margin-top: 32px;
+  max-width: none;
 }
 
 .index-cards-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: clamp(440px, 70%, 600px);
   flex-grow: 1;
 }
 
 .map-wrapper {
+  position: sticky;
   width: 50%;
   height: 100vh;
-  position: sticky;
   top: 65px;
+  margin-right: 16px;
+  padding-top: 30px;
 }
 
 #index-card {
@@ -37,4 +40,22 @@
   margin: 0;
   background: #f4f4f4;
   z-index: 50;
+}
+
+@media (max-width: 768px) {
+  .map-card-container {
+    flex-direction: column;
+  }
+
+  .map-card-container > div {
+    width: 100% !important;
+  }
+
+  .map-card-container .searchbar {
+    width: clamp(300px ,100%, 370px) !important;
+  }
+
+  .card-trip-infos .card-text {
+    display: none;
+  }
 }
