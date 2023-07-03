@@ -7,7 +7,7 @@
 .index-cards-container {
   display: flex;
   flex-direction: column;
-  width: clamp(440px, 70%, 600px);
+  width: clamp(440px, 100%, 600px);
   flex-grow: 1;
 }
 
